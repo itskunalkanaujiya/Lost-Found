@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %} Delete  {% endblock %}
+
+{% block content %}
+<div class="container mt-5" style="min-height: 80vh;"> <!-- Added min-height to push footer down -->
+    <h1 class="text-white text-center mt-4" style="font-size: 2.5rem; font-family: 'Roboto', sans-serif; font-weight: 700; 
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">
+        Are you sure you want to delete the Query?
+    </h1>
+    <br><br>
+    <form method="post" class="d-flex justify-content-center">
+        {% csrf_token %}
+        <button class="btn btn-danger me-4" style="font-size: 1.1rem; border-radius: 25px;">Delete</button>
+        <a class="btn btn-success" href="{% url 'list' %}" style="font-size: 1.1rem; border-radius: 25px;">
+            Cancel
+        </a>
+    </form>
+</div>
+
+<footer class="footer mt-auto py-3" style="background-color: #343a40;"> <!-- Footer style -->
+    <div class="container text-center">
+        <p class="text-white">&copy; 2024 Your Company Name. All rights reserved.</p>
+    </div>
+</footer>
+
+{% endblock %}

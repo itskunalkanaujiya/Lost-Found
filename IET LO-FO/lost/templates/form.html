@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %} IET Lo-Fo
+{% endblock %}
+
+{% block content %}
+<h1 class="text-white text-center"> </h1>
+<h2>
+    {% if form.instance.pk %}
+    Edit the Query
+    {% else %}
+    Report a Lost Item
+    {% endif %}
+    <form method="post" enctype="multipart/form-data" class="form">
+         {% csrf_token %}
+        {{form.as_p}}
+
+        <!-- Button container for side-by-side alignment -->
+        <div class="d-flex justify-content-start mt-3">
+            <button class="btn btn-warning me-4" type="submit">Submit</button>
+            <a class="btn btn-success" href="{% url 'list' %}" style="font-size: 1.1rem; border-radius: 25px;">
+                Back to Home
+            </a>
+        </div>
+    </form>
+</h2>
+{% endblock %}

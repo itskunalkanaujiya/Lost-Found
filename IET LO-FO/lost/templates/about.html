@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #121212;
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #00e676;
+    }
+
+    .btn-success {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        font-size: 1.2rem;
+        border-radius: 25px;
+        padding: 12px 24px;
+        background-color: #28a745;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 20rem;
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-img-top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .card-text h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .card-text h3 {
+        font-size: 1.4rem;
+        color: #bdbdbd;
+        margin-bottom: 10px;
+    }
+
+    .card-text h4 {
+        font-size: 1.2rem;
+        color: #757575;
+    }
+
+    footer {
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background-color: #00e676;
+        color: black;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+</style>
+
+<h1>Trio-Tech</h1>
+<a class="btn btn-success" href="{% url 'list' %}">
+    Back to Home
+</a>
+<div class="container">
+    <div class="card">
+        <img src="/static/shivang.png" class="card-img-top" alt="Shivang's Image">
+        <div class="card-body">
+            <p class="card-text">
+                <h2>Shivang Raj Mittal</h2>
+                <h3>CSE(AI)-2nd Year</h3>
+                <h4>Roll No: 2300521520060</h4>
+                <h4>Contact: 7310942398</h4>
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="/static/astha.png" class="card-img-top" alt="Astha's Image">
+        <div class="card-body">
+            <p class="card-text">
+                <h2>Astha Vimal</h2>
+                <h3>CSE(AI)-2nd Year</h3>
+                <h4>Roll No: 2300521520078</h4>
+                <h4>Contact: 8840758517</h4>
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="/static/kunal2.png" class="card-img-top" alt="Kunal's Image">
+        <div class="card-body">
+            <p class="card-text">
+                <h2>Kunal Kanaujiya</h2>
+                <h3>CSE(AI)-2nd Year</h3>
+                <h4>Roll No: 2300521520034</h4>
+                <h4>Contact: 7007081798</h4>
+            </p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Trio-Tech. All rights reserved.
+</footer>
+{% endblock %}
