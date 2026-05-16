@@ -33,4 +33,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Start server using Gunicorn
-CMD ["gunicorn","iet" ,"--bind", "0.0.0.0:8000", "project_name.wsgi:application"]
+CMD ["gunicorn","iet" ,"--bind", "0.0.0.0:8000", "iet.wsgi:application"]
